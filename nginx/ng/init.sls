@@ -6,6 +6,7 @@ include:
   - nginx.ng.config
   - nginx.ng.service
   - nginx.ng.vhosts
+  - nginx.ng.secure
 
 extend:
   nginx_service:

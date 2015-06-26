@@ -101,6 +101,12 @@
 })%}
 {% endif %}
 
+{% if nginx.information is defined %}
+{% set nginx_secure = salt['pillar.get']('nginx:information:'{
+    'htpasswd_file': '/etc/nginx/htpasswd'
+} , merge=True) %}
+{% endif %}
+
 {% if 'pid' not in nginx.server.config and 'pid_file' in nginx.lookup %}
 {% do nginx.server.config.update({
     'pid': nginx.lookup.pid_file,

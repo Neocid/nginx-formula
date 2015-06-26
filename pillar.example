@@ -105,4 +105,14 @@ nginx:
           #        try_files $uri $uri/ =404;
           #        test something else;
           #    }
-          # }         
+          # }
+
+    # Add nginx password generation via htpasswd tools
+    secure:
+      user1:
+        username: user1
+        password: user1pw
+
+      user2:
+        username: user2
+        password: user2pw

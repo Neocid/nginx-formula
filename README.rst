@@ -94,3 +94,9 @@ and does not bind them to service calls.
 -------------------
 
 Manages nginx virtual hosts files and binds them to service calls.
+
+
+``nginx.ng.secure``
+-------------------
+
+Manages nginx htaccess passwd via apache2_utils package.
